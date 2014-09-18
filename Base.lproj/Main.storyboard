@@ -56,10 +56,10 @@
                             <rect key="frame" x="-61" y="-14" width="123" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="" image="delete"/>
-                                <segment title="" image="masks"/>
-                                <segment title="" image="check"/>
-                                <segment title="" image="add"/>
+                                <segment title="" image="film-minus-7"/>
+                                <segment title="" image="film-7"/>
+                                <segment title="" image="film-tick-7"/>
+                                <segment title="" image="film-plus-7"/>
                             </segments>
                             <connections>
                                 <action selector="segmentedAction:" destination="FSB-3H-r2G" eventType="valueChanged" id="4jP-a3-eP0"/>
@@ -103,7 +103,7 @@
             </objects>
             <point key="canvasLocation" x="-103.5" y="1244.25"/>
         </scene>
-        <!--Item 1-->
+        <!--Settings-->
         <scene sceneID="5Vg-ew-YDc">
             <objects>
                 <viewController id="HEe-ZR-MG3" sceneMemberID="viewController">
@@ -115,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="7j8-4E-QCN"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="tune-adjust-side-7" id="7j8-4E-QCN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxa-4S-gC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,11 +141,11 @@
             </objects>
             <point key="canvasLocation" x="-1354.5" y="895.5"/>
         </scene>
-        <!--Item-->
+        <!--Films-->
         <scene sceneID="AXM-yi-4nj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kOL-sV-zqy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2MJ-sy-CS3"/>
+                    <tabBarItem key="tabBarItem" title="Films" image="film-7" id="2MJ-sy-CS3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="25t-DX-mNG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -162,9 +162,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add" width="24" height="24"/>
-        <image name="check" width="24" height="24"/>
-        <image name="delete" width="24" height="24"/>
-        <image name="masks" width="24" height="24"/>
+        <image name="film-7" width="29" height="30"/>
+        <image name="film-minus-7" width="29" height="30"/>
+        <image name="film-plus-7" width="29" height="30"/>
+        <image name="film-tick-7" width="29" height="30"/>
+        <image name="tune-adjust-side-7" width="29" height="30"/>
     </resources>
 </document>
