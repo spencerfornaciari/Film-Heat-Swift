@@ -15,11 +15,17 @@ class NetworkController: NSObject {
         
         let rottenURL : NSURL = NSURL.URLWithString(rottenString)
         
+
+        
+        var rottenData : NSData = NSData.dataWithContentsOfURL(rottenURL, options: NSDataReadingOptions.DataReadingMappedAlways, error:nil)
+        
         var error : NSError?
         
-        var rottenData : NSData = NSData.dataWithContentsOfURL(rottenURL, options: NSDataReadingOptions.DataReadingMappedAlways, error:&error)
+//        var rottenDictionary : Dictionary = NSJSONSerialization.JSONObjectWithData(rottenData, options: NSJSONReadingOptions.MutableContainers, error: &error) as Dictionary
         
-//        var rottenDictionary : Dictionary =
+//        var rottenDictionary : Dictionary = NSJSONSerialization.JSONObjectWithData(rottenData, options: NSJSONReadingOptions.MutableContainers, error: &error)
+        
+        
     }
     
 /*

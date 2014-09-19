@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Film" syncable="YES">
+        <attribute name="audienceRating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="audienceScore" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="criticalConsensus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="criticalRating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="criticalScore" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="findSimilarFilms" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imdbID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="interestStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="mpaaRating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="posterAvailable" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="posterLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="posterURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ratingValue" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="ratingVariance" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="releaseDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="rottenTomatoesID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="runtime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="studio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="synopsis" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailAvailable" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="thumbnailPosterLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailPosterURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userRating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="genres" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Genre" inverseName="film" inverseEntity="Genre" syncable="YES"/>
+    </entity>
+    <entity name="Genre" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="film" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Film" inverseName="genres" inverseEntity="Film" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Film" positionX="-63" positionY="-18" width="128" height="418"/>
+        <element name="Genre" positionX="-54" positionY="144" width="128" height="73"/>
+    </elements>
 </model>
