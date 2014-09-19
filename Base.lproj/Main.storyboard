@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zuU-Og-SkD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zuU-Og-SkD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search film titles" id="Rn7-AD-xCv">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -94,31 +94,14 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="867" y="1765.5"/>
-        </scene>
-        <!--Item 2-->
-        <scene sceneID="veh-aH-ZEf">
-            <objects>
-                <viewController id="TOd-Ns-QEE" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L0Z-Ef-XAh"/>
-                        <viewControllerLayoutGuide type="bottom" id="fbc-gu-hBy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mjg-nW-Av0">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="0tc-uL-jd0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ez-wS-4ql" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-103.5" y="1244.25"/>
+            <point key="canvasLocation" x="1785" y="1765.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="lwD-if-khm">
             <objects>
                 <tableViewController id="Xjc-R3-5BU" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mI0-Q1-yez">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -216,7 +199,7 @@
                     <connections>
                         <segue destination="kOL-sV-zqy" kind="relationship" relationship="viewControllers" id="VMw-1G-QlP"/>
                         <segue destination="AJE-jE-xeJ" kind="relationship" relationship="viewControllers" id="8Mh-dY-XSj"/>
-                        <segue destination="TOd-Ns-QEE" kind="relationship" relationship="viewControllers" id="yWD-4x-5EB"/>
+                        <segue destination="Sjy-RW-veu" kind="relationship" relationship="viewControllers" id="qS9-Jy-iJv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbp-J5-ZbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,6 +225,33 @@
             </objects>
             <point key="canvasLocation" x="-837" y="1749"/>
         </scene>
+        <!--More Table View Controller-->
+        <scene sceneID="KBF-ye-TGE">
+            <objects>
+                <tableViewController id="c6p-SP-oIx" customClass="MoreTableViewController" customModule="Film_Heat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UL9-a0-9ZW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iSL-8V-59A">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iSL-8V-59A" id="YPq-Iw-X37">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c6p-SP-oIx" id="Ihq-jo-QMF"/>
+                            <outlet property="delegate" destination="c6p-SP-oIx" id="5rw-HU-eOO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1wj-Ie-1ff"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9u-dw-4Fy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775.5" y="1227"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="h7M-Wv-jV5">
             <objects>
@@ -261,8 +271,28 @@
             </objects>
             <point key="canvasLocation" x="-103.5" y="581.25"/>
         </scene>
+        <!--More-->
+        <scene sceneID="yIX-4R-mov">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sjy-RW-veu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" image="dots" id="Fgs-GC-i61"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="koV-RY-bDF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c6p-SP-oIx" kind="relationship" relationship="rootViewController" id="w21-jD-Iv7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRp-NB-uE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142.5" y="1227"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="dots" width="24" height="24"/>
         <image name="film-7" width="29" height="30"/>
         <image name="film-minus-7" width="29" height="30"/>
         <image name="film-plus-7" width="29" height="30"/>
